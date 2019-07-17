@@ -7,17 +7,8 @@ pipeline {
       }
     }
     stage('build') {
-      parallel {
-        stage('build') {
-          steps {
-            bat 'mvn compile'
-          }
-        }
-        stage('sonar') {
-          steps {
-            bat 'mvn sonar:sonar'
-          }
-        }
+      steps {
+        bat 'mvn compile'
       }
     }
   }
