@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Junit Test') {
       steps {
-        bat 'mvn clean test'
+        bat 'mvn test'
       }
     }
     stage('sonar') {
