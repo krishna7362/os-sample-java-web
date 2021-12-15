@@ -25,6 +25,8 @@ jobs:
           command: mvn -B -DskipTests clean package	
 
   test:
+    docker:
+      - image: cimg/openjdk:11.0
     steps:
       # Then run your tests!
       - run:
