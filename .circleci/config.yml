@@ -29,6 +29,7 @@ jobs:
       - image: cimg/openjdk:11.0
     steps:
       # Then run your tests!
+      - checkout
       - run:
           name: Test
           command: mvn test
